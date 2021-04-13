@@ -20,8 +20,8 @@ Here is a pseudo-code ("informal description") of the PDA:
      - If `b` was the most recently read char before this `a`:
        - Accept the word (since we got a substring of the form `ba`, which is not allowed in `a^nb^n`.)
      - Otherwise, push an `a` onto the stack. 
-   - Otherwise, for each encountered b, pop an `a` from the stack. 
-     - If a `$` symbol is popped from the stack:
+   - Otherwise, for each encountered b, pop a symbol from the stack. 
+     - If a `$` symbol was popped from the stack:
        - Accept the word (the string begins with `b`s or there are more `b`s than `a`s.) 
 
 3. When there are no more symbols to read from the input string, pop a symbol from the stack.
